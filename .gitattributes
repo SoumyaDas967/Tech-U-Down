@@ -1,0 +1,10 @@
+# Model weights and restored outputs through Git LFS.
+# GitHub free tier: 1 GB storage, 1 GB/month bandwidth -- for a checkpoint this
+# size a Drive or Hugging Face link is usually safer. See weights/README.md.
+*.pth filter=lfs diff=lfs merge=lfs -text
+*.pt  filter=lfs diff=lfs merge=lfs -text
+*.onnx filter=lfs diff=lfs merge=lfs -text
+
+# Keep .npy predictions out of LFS only if you zip them instead; 400 x 256KB is
+# about 100 MB, which is over GitHub's comfortable limit for plain git.
+*.npy filter=lfs diff=lfs merge=lfs -text
