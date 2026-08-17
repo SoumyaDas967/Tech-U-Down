@@ -4,13 +4,10 @@ __pycache__/
 .DS_Store
 ._*
 __MACOSX/
-
-# local artefacts, not part of the submission
 runs/
 smoke_data/
 smoke_manifest.json
 manifest.json
-*.pdf
-comparison*.png
-.venv/
 venv/
+.venv/
+demo/
